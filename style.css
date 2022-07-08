@@ -19,11 +19,23 @@ body {
 }
 
 .date-timezone {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: #080808;
     padding: 30px 25px;
     border-radius: 9px;
     box-shadow: 0 15px 20px rgb(0,0,0,0.7);
     margin-bottom: 50px;
+}
+
+@media screen and (max-width: 560px ) {
+    .date-timezone {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 15px 2px;
+    }
 }
 
 input, button {
@@ -34,24 +46,47 @@ input, button {
     color: #080808;
 }
 
+
 input {
     font-size: 14px;
     padding: 0 20px;
-    width: 60%;
+    width: 50%;
 }
 
+
+@media screen and (max-width: 560px ) {
+    input {
+        font-size: 14px;
+        width: 60%;
+        align-self: center;
+    }
+
+}
+
+
 button {
+    margin-left: 15px;
     width: 30%;
-    float: right;
     color: #080808;
     background-color: #ffffff;
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 560px ) {
+    button {
+        margin-top: 15px;
+        width: 50%;
+    }
+
+}
+
+
 .Return-output {
     display: flex;
-    width: 100%;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    width: 100%;
 }
 
 .Return-output div {
@@ -64,6 +99,22 @@ button {
     place-items: center;
     padding: 0px 20px;
     box-shadow: 0 15px 20px rgb(0,0,0,0.7);
+}
+
+@media screen and (max-width: 560px) {
+
+    .Return-output {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin: 20px;
+    }
+
+    .Return-output div {
+        height: 90px;
+        width: 50px;
+    }
+
 }
 
 span {
